@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Pipeline Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #f5f7fa; min-height: 100vh; padding: 20px; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    h1 { color: #1a1a2e; margin-bottom: 20px; font-size: 24px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+    .stat { background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .stat-num { font-size: 32px; font-weight: bold; color: #007bff; }
+    .stat-label { color: #666; font-size: 14px; margin-top: 5px; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #f8f9fa; padding: 15px; text-align: left; font-weight: 600; color: #444; font-size: 13px; text-transform: uppercase; }
+    td { padding: 15px; border-bottom: 1px solid #eee; }
+    tr:hover { background: #fafafa; }
+    .status { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+    .status-interview { background: #fff3e0; color: #e65100; }
+    .status-applied { background: #e3f2fd; color: #1565c0; }
+    .status-pending { background: #f3e5f5; color: #7b1fa2; }
+    .status-rejected { background: #ffebee; color: #c62828; }
+    .company { font-weight: 600; color: #333; }
+    .role { color: #666; }
+    .date { color: #999; font-size: 13px; }
+    @media (max-width: 600px) { table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Job Pipeline Dashboard</h1>
+    
+    <div class="stats">
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Total Applications</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Interviews</div></div>
+      <div class="stat"><div class="stat-num">7</div><div class="stat-label">Pending</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Rejected</div></div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="company">Delphi Consulting</td>
+            <td class="role">Senior AI PM</td>
+            <td><span class="status status-interview">Interview</span></td>
+            <td class="date">Feb 23</td>
+          </tr>
+          <tr>
+            <td class="company">Mubadala</td>
+            <td class="role">VP Digital Transformation</td>
+            <td><span class="status status-interview">Interview</span></td>
+            <td class="date">Mar 1</td>
+          </tr>
+          <tr>
+            <td class="company">e& enterprise</td>
+            <td class="role">Chief Digital Officer</td>
+            <td><span class="status status-interview">Interview</span></td>
+            <td class="date">Mar 5</td>
+          </tr>
+          <tr>
+            <td class="company">Talabat</td>
+            <td class="role">VP Technology</td>
+            <td><span class="status status-applied">Applied</span></td>
+            <td class="date">Mar 8</td>
+          </tr>
+          <tr>
+            <td class="company">Noon</td>
+            <td class="role">Director of Engineering</td>
+            <td><span class="status status-applied">Applied</span></td>
+            <td class="date">Mar 7</td>
+          </tr>
+          <tr>
+            <td class="company">Fetcherr</td>
+            <td class="role">Head of Product</td>
+            <td><span class="status status-pending">Pending</span></td>
+            <td class="date">Mar 6</td>
+          </tr>
+          <tr>
+            <td class="company">Careem</td>
+            <td class="role">VP Engineering</td>
+            <td><span class="status status-pending">Pending</span></td>
+            <td class="date">Mar 4</td>
+          </tr>
+          <tr>
+            <td class="company">M次</td>
+            <td class="role">Digital Lead</td>
+            <td><span class="status status-rejected">Rejected</span></td>
+            <td class="date">Feb 28</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
